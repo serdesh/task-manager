@@ -48,4 +48,11 @@ Route::get('/tasks', 'App\Http\Controllers\TaskController@index')->name('tasks')
 Route::get('task', ['as' => 'task.edit', 'uses' => 'App\Http\Controllers\TaskController@edit']);
 Route::put('task', ['as' => 'task.update', 'uses' => 'App\Http\Controllers\TaskController@update']);
 
+Route::get('/customers', 'App\Http\Controllers\CustomerController@index')->name('customers');
+
+Route::get('customer/add', ['as' => 'customer.create', 'uses' => 'App\Http\Controllers\CustomerController@create']);
+Route::get('customer/update', ['as' => 'customer.edit', 'uses' => 'App\Http\Controllers\CustomerController@edit']);
+Route::put('customer/update', ['as' => 'customer.update', 'uses' => 'App\Http\Controllers\CustomerController@update']);
+
+Route::get('/projects', 'App\Http\Controllers\ProjectController@index')->name('projects');
 

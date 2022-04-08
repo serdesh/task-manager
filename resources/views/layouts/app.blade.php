@@ -12,14 +12,15 @@
     <link href="{{ asset('argon') }}/img/brand/favicon.png" rel="icon" type="image/png">
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
-    <!-- Extra details for Live View on GitHub Pages -->
-
     <!-- Icons -->
     <link href="{{ asset('argon') }}/vendor/nucleo/css/nucleo.css" rel="stylesheet">
     <link href="{{ asset('argon') }}/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- Argon CSS -->
     <link type="text/css" href="{{ asset('argon') }}/css/argon.css?v=1.0.0" rel="stylesheet">
-    <link type="text/css" href="{{ url('assets/css/main.css') }}" rel="stylesheet">
+   <link type="text/css" href="{{ url('assets/css/main.css') }}" rel="stylesheet">
+
 </head>
 <body class="{{ $class ?? '' }}">
 @auth()
@@ -28,6 +29,7 @@
     </form>
     @include('layouts.navbars.sidebar')
 @endauth
+
 
 <div class="main-content">
     @include('layouts.navbars.navbar')
@@ -38,7 +40,6 @@
     @include('layouts.footers.guest')
 @endguest
 
-
 <script src="{{ asset('argon') }}/vendor/jquery/dist/jquery.min.js"></script>
 <script src="{{ asset('argon') }}/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
@@ -46,5 +47,6 @@
 
 <!-- Argon JS -->
 <script src="{{ asset('argon') }}/js/argon.js?v=1.0.0"></script>
+<script src="{{ url('assets/js/main.js') }}"></script>
 </body>
 </html>
