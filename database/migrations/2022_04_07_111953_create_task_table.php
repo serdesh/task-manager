@@ -20,10 +20,10 @@ return new class extends Migration
             $table->text('description');
             $table->text('note');
             $table->text('status');
-            $table->date('done_date')->default(null);
-            $table->double('fixed_price')->default(null)->comment('Фиксированная сумма оплаты');
+            $table->date('done_date')->nullable();
+            $table->double('fixed_price')->nullable()->comment('Фиксированная сумма оплаты');
             $table->integer('time_spent')->default(0)->comment('Затраченное время, мин');
-            $table->date('deadline')->default(null)->comment('Срок');
+            $table->date('deadline')->nullable()->comment('Срок');
             $table->unsignedBigInteger('project_id')->index()->comment('Проект');
             $table->foreign('project_id')->references('id')->on('project')
                 ->onDelete('CASCADE');

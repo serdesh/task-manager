@@ -1,0 +1,13 @@
+.under-nav-auth {
+    height: 8rem !important;
+    width: 100%;
+    background: linear-gradient(87deg, #5e72e4 0, #825ee4 100%) !important;
+}
+
+.pt-md-8 {
+    padding-top: 0 !important;
+}
+
+.mt--6, .my--6 {
+    margin-top: -2.5rem !important;
+}

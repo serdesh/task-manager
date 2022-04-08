@@ -20,7 +20,7 @@ return new class extends Migration
             $table->unsignedBigInteger('project_id')->index();
             $table->foreign('project_id')->references('id')->on('project')
                 ->onDelete('CASCADE');
-            $table->date('date')->default(null)->comment('Дата платежа');
+            $table->date('date')->nullable()->comment('Дата платежа');
             $table->double('amount')->default(0)->comment('Сумма, руб.');
         });
         DB::statement("ALTER TABLE `payment` comment 'Оплата'");
