@@ -38,7 +38,7 @@
                                 </div>
                                 <div class="form-group{{ $errors->has('phone') ? ' has-danger' : '' }}">
                                     <label class="form-control-label" for="input-phone">{{ __('Телефон') }}</label>
-                                    <input name="phone" id="input-phone" class="form-control form-control-alternative{{ $errors->has('phone') ? ' is-invalid' : '' }}" placeholder="{{ __('Телефон') }}" value="{{ old('phone') }}" required>
+                                    <input name="phone" id="input-phone" class="form-control form-control-alternative{{ $errors->has('phone') ? ' is-invalid' : '' }}" placeholder="{{ __('Телефон') }}" value="{{ old('phone') }}">
 
                                     @if ($errors->has('phone'))
                                         <span class="invalid-feedback" role="alert">

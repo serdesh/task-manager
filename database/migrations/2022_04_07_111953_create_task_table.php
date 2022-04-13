@@ -18,7 +18,7 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->text('description');
-            $table->text('note');
+            $table->text('note')->nullable();
             $table->text('status');
             $table->date('done_date')->nullable();
             $table->double('fixed_price')->nullable()->comment('Фиксированная сумма оплаты');

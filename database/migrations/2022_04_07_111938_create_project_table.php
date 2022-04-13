@@ -18,7 +18,7 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->string('name');
-            $table->text('url');
+            $table->text('url')->nullable();
             $table->unsignedBigInteger('customer_id')->index();
         });
         Schema::table('project', function (Blueprint $table) {

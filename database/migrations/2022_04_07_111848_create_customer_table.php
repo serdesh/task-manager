@@ -18,8 +18,8 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->string('name')->unique();
-            $table->string('phone')->unique();
-            $table->text('note');
+            $table->string('phone')->nullable()->unique();
+            $table->text('note')->nullable();
         });
         DB::statement("ALTER TABLE `customer` comment 'Заказчики'");
     }
